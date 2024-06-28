@@ -27,7 +27,7 @@ export const useWeatherStore = defineStore('weather', {
         this.suggestions = [];
         return;
       }
-      const apiKey = '6e0cb6c3a2b66fa0d53f11cab76f0503';
+      const apiKey = '';
       const url = `http://api.openweathermap.org/data/2.5/find?q=${this.query}&type=like&sort=population&cnt=5&appid=${apiKey}`;
 
       try {
@@ -48,7 +48,7 @@ export const useWeatherStore = defineStore('weather', {
     async getWeather() {
       if (!this.locationKey) return;
 
-      const apiKey = '6e0cb6c3a2b66fa0d53f11cab76f0503';
+      const apiKey = '';
       const url = `http://api.openweathermap.org/data/2.5/weather?id=${this.locationKey}&units=metric&appid=${apiKey}`;
 
       try {
